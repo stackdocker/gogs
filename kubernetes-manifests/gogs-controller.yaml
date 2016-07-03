@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  annotations:
+    qingyuanos.io/catalog-by: '{"version": "v1alpha", "lib": "https://github.com/qingyuancloud/harpoon", "module": "https://github.com/gogits/gogs"}'
+  labels:
+    app: gogs
+    heritage: qingyuancloud.com
+    name: gogs
+    project: gogs.io
+  name: gogs
+  # namespace: harpoon
+spec:
+  replicas: 1
+  selector:
+    name: gogs
+  template:
+    metadata:
+      labels:
+        name: gogs
+    spec:
+      containers:
+      - image: gogs/gogs
+        imagePullPolicy: IfNotPresent
+        name: gogs
+        ports:
+        - containerPort: 3000
+        - containerPort: 22
