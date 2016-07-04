@@ -35,7 +35,7 @@ Create *service* manifest to install
 
 ## Set up gogs
 
-* Figure: First browsing
+* Figure: First to browse
 
 ![install](/kubernetes-manifests/img/屏幕快照%202016-07-03%20上午9.50.36.png)
 
@@ -44,6 +44,8 @@ Create *service* manifest to install
 ![database](/kubernetes-manifests/img/屏幕快照%202016-07-03%20上午9.51.57.png)
 
 * Figure: Setup networking
+
+According documentation, the application url should be the same address as browser currently accessing
 
 ![networking](/kubernetes-manifests/img/屏幕快照%202016-07-03%20上午10.10.37.png)
 
